@@ -13,14 +13,13 @@ RUN python3 -m ensurepip
 RUN pip3 install --no-cache --upgrade pip setuptools
 
 # Copy application
-RUN mkdir /usr/discord_help_bot
+RUN mkdir /usr/tda_api_helper
 
-COPY config.yml /usr/discord_help_bot
-COPY *.py /usr/discord_help_bot
-COPY docker-run.sh /usr/discord_help_bot
-COPY requirements.txt /usr/discord_help_bot
+COPY config.yml /usr/tda_api_helper
+COPY *.py /usr/tda_api_helper
+COPY requirements.txt /usr/tda_api_helper
 
 # Install python requirements
-RUN cd /usr/discord_help_bot && pip install -r requirements.txt
+RUN cd /usr/tda_api_helper && pip install -r requirements.txt
 
-ENTRYPOINT ["python", "/usr/discord_help_bot/bot.py"]
+ENTRYPOINT ["python", "/usr/tda_api_helper/bot.py"]
