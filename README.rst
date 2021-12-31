@@ -39,11 +39,9 @@ Create the volume on which you'll store the state DB:
 Initialize the state:
 
 .. code-block:: bash
-   docker run -t -v discord_bot_state:/state <IMAGE_ID> init --sqlite_db_file 
-   /sqlite/state.sqlite_db
+   docker run -t -v discord_bot_state:/sqlite <IMAGE_ID> init --sqlite_db_file /sqlite/state.sqlite_db
 
 Start the bot:
 
 .. code-block:: bash
-   docker run -t -v discord_bot_state:/state <IMAGE_ID> run --token 
-   <DISCORD_TOKEN>
+   docker run -t -v discord_bot_state:/sqlite <IMAGE_ID> run --token <DISCORD_TOKEN> --sqlite_db_file /sqlite/state.sqlite_db
