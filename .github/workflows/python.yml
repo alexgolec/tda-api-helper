@@ -37,15 +37,15 @@ jobs:
       run: tox
 
     - name: Report coverage
-      if: matrix.python.version == '3.8'
+      if: matrix.python.version == '3.9'
       run: |
         coverage combine
         coverage report
         coverage xml
 
     - name: Upload coverage to Codecov  
-      if: matrix.python.version == '3.8'
-      uses: codecov/codecov-action@v1.0.5
+      if: matrix.python.version == '3.9'
+      uses: codecov/codecov-action@v2.1.0
       with:
         token: ${{ secrets.CODECOV_TOKEN }}
         file: ./coverage.xml
