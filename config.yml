@@ -9,3 +9,13 @@ prompts:
 
 
       https://tda-api.readthedocs.io/en/latest/auth.html#a-third-party-application-may-be-attempting-to-make-unauthorized-access-to-your-account
+
+  missing-webdriver:
+    triggers:
+      - 'cannot find chrome binary'
+      - 'executable needs to be in path'
+    response: >
+      It looks like you might be asking for help about a common issue with webdrivers. See here for help: 
+
+
+      https://tda-api.readthedocs.io/en/latest/auth.html#webdriverexception-message-chromedriver-executable-needs-to-be-in-path
