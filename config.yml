@@ -19,3 +19,12 @@ prompts:
 
 
       https://tda-api.readthedocs.io/en/latest/auth.html#webdriverexception-message-chromedriver-executable-needs-to-be-in-path
+
+  invalid-grant:
+    triggers:
+      - 'invalid_grant'
+    response: >
+      It looks like you might be asking for help about a common issue with tokens. See here for help:
+
+
+      https://tda-api.readthedocs.io/en/latest/auth.html#oautherror-invalid-grant-invalid-grant
